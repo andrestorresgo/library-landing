@@ -1,0 +1,133 @@
+---
+// Hero section component for the library landing page
+import { Button } from "./ui/button";
+---
+
+<section
+    class="hero-section min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white px-4"
+>
+    <div class="text-center max-w-4xl mx-auto">
+        <!-- Main title with mixed fonts -->
+        <h1
+            class="hero-title text-8xl md:text-9xl lg:text-[12rem] font-bold mb-6 leading-tight"
+        >
+            <span class="text-amber-600 schoolbell">Libros</span>
+            <span class="text-black comfortaa en-la"> en la </span>
+            <span class="text-blue-500 schoolbell">frontera</span>
+        </h1>
+
+        <!-- Description -->
+        <p
+            class="hero-description text-3xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed comfortaa"
+        >
+            Ayuda a llenar de historias y conocimiento la biblioteca de una
+            escuela en la frontera de Bolivia
+        </p>
+
+        <!-- Call to action button -->
+        <Button
+            size="lg"
+            className="hero-button text-3xl px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 comfortaa bg-blue-500 hover:bg-blue-600 text-white"
+            client:load
+        >
+            Contáctanos
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="ml-2"
+            >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+            </svg>
+        </Button>
+    </div>
+</section>
+
+<style>
+    .comfortaa {
+        font-family: "Comfortaa Variable", "Comfortaa", sans-serif;
+        font-variation-settings: "wght" 400;
+    }
+
+    .schoolbell {
+        font-family: "Schoolbell", cursive;
+        font-weight: 400;
+        transform: rotate(-2deg);
+        display: inline-block;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-title .comfortaa {
+        font-variation-settings: "wght" 700;
+    }
+
+    .hero-title .en-la {
+        font-variation-settings: "wght" 600;
+        font-size: 9.375rem;
+    }
+
+    .hero-button {
+        font-variation-settings: "wght" 600;
+    }
+
+    .hero-section {
+        background: linear-gradient(
+            /* 135deg,
+            #f0f9ff 0%,
+            #e0f2fe 50%,
+            #ffffff 100% */
+
+            bg-gray
+        );
+    }
+
+    @media (max-width: 768px) {
+        .hero-title {
+            font-size: 5rem;
+            line-height: 1.1;
+        }
+
+        .hero-title .en-la {
+            font-size: 5rem;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-title {
+            font-size: 4rem;
+        }
+
+        .hero-title .en-la {
+            font-size: 4rem;
+        }
+
+        .hero-description {
+            font-size: 1rem;
+        }
+    }
+
+    .underline-libros {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 15'%3E%3Cpath d='M0,10 C20,5 40,15 60,10 S80,5 100,10' stroke='%23fb923c' stroke-width='3' fill='none' /%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: 100% 100%;
+    }
+
+    .underline-frontera {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 15'%3E%3Cpath d='M0,10 C20,15 40,5 60,15 S80,5 100,10' stroke='%233b82f6' stroke-width='3' fill='none' /%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: 100% 100%;
+    }
+</style>
