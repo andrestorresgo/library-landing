@@ -1,0 +1,139 @@
+---
+import {
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
+import StoriesCarousel from "@/components/react/StoriesCarousel";
+---
+
+<section class="py-20 px-4 bg-gradient-to-b from-white to-blue-50">
+    <div class="container mx-auto">
+        <!-- Desktop View - Grid Layout -->
+        <div class="hidden md:grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card
+                className="flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+                <CardHeader className="pb-2">
+                    <div class="flex justify-center mb-2">
+                        <img
+                            src="/img/kid1.svg"
+                            alt="Shari"
+                            class="w-40 h-40 rounded-full object-cover"
+                        />
+                    </div>
+                    <CardTitle
+                        className="text-center text-xl font-bold comfortaa"
+                    >
+                        Hola, Soy Shari!
+                    </CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow px-6 py-2">
+                    <p class="text-gray-600 text-center italic leading-relaxed">
+                        "Junto a mi comunidad construimos una biblioteca, un
+                        espacio para aprender y soñar. Me gustaría tener libros
+                        de leyendas de nuestra tierra y narraciones de
+                        historias."
+                    </p>
+                </CardContent>
+                <CardFooter className="pt-2 pb-6">
+                    <div class="w-full text-center">
+                        <span class="schoolbell text-2xl text-blue-500">
+                            "Leer abre puertas"
+                        </span>
+                    </div>
+                </CardFooter>
+            </Card>
+
+            <Card
+                className="flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+                <CardHeader className="pb-2">
+                    <div class="flex justify-center mb-2">
+                        <img
+                            src="/img/kid2.svg"
+                            alt="Nayde"
+                            class="w-40 h-40 rounded-full object-cover"
+                        />
+                    </div>
+                    <CardTitle
+                        className="text-center text-xl font-bold comfortaa"
+                    >
+                        Hola, Soy Nayde!
+                    </CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow px-6 py-2">
+                    <p class="text-gray-600 text-center italic leading-relaxed">
+                        "Junto a mi comunidad construimos una biblioteca, un
+                        espacio para aprender y soñar. Me gustaría tener libros
+                        de leyendas de nuestra tierra y narraciones de
+                        historias."
+                    </p>
+                </CardContent>
+                <CardFooter className="pt-2 pb-6">
+                    <div class="w-full text-center">
+                        <span class="schoolbell text-2xl text-amber-500">
+                            "Me encanta leer"
+                        </span>
+                    </div>
+                </CardFooter>
+            </Card>
+
+            <Card
+                className="flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+                <CardHeader className="pb-2">
+                    <div class="flex justify-center mb-2">
+                        <img
+                            src="/img/kid3.svg"
+                            alt="Alison"
+                            class="w-40 h-40 rounded-full object-cover"
+                        />
+                    </div>
+                    <CardTitle
+                        className="text-center text-xl font-bold comfortaa"
+                    >
+                        Hola, Soy Alison!
+                    </CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow px-6 py-2">
+                    <p class="text-gray-600 text-center italic leading-relaxed">
+                        "Junto a mi comunidad construimos una biblioteca, un
+                        espacio para aprender y soñar. Me gustaría tener libros
+                        de leyendas de nuestra tierra y narraciones de
+                        historias."
+                    </p>
+                </CardContent>
+                <CardFooter className="pt-2 pb-6">
+                    <div class="w-full text-center">
+                        <span class="schoolbell text-2xl text-green-500">
+                            "Una aventura espera en cada libro"
+                        </span>
+                    </div>
+                </CardFooter>
+            </Card>
+        </div>
+
+        <!-- Mobile View - Carousel -->
+        <div class="md:hidden">
+            <StoriesCarousel client:load />
+        </div>
+    </div>
+</section>
+
+<style>
+    .comfortaa {
+        font-family: "Comfortaa Variable", "Comfortaa", sans-serif;
+        font-variation-settings: "wght" 400;
+    }
+
+    .schoolbell {
+        font-family: "Schoolbell", cursive;
+        font-weight: 400;
+        transform: rotate(-2deg);
+        display: inline-block;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+</style>
