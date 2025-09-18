@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 ---
 
 <section
-    class="hero-section min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white px-4"
+    class="hero-section min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white px-4 py-8 md:py-0"
 >
     <div class="text-center max-w-4xl mx-auto">
         <!-- Main title with mixed fonts -->
@@ -27,7 +27,7 @@ import { Button } from "./ui/button";
         <!-- Call to action button -->
         <Button
             size="lg"
-            className="hero-button text-3xl px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 comfortaa bg-blue-500 hover:bg-blue-600 text-white"
+            className="hero-button text-lg md:text-3xl px-6 py-3 md:px-8 md:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 comfortaa bg-blue-500 hover:bg-blue-600 text-white"
             client:load
         >
             Contáctanos
@@ -83,15 +83,20 @@ import { Button } from "./ui/button";
             #f0f9ff 0%,
             #e0f2fe 50%,
             #ffffff 100% */
-
-            bg-gray
+                bg-gray
         );
     }
 
     @media (max-width: 768px) {
+        .hero-section {
+            min-height: 60vh;
+            padding: 1rem 1rem;
+        }
+
         .hero-title {
             font-size: 5rem;
             line-height: 1.1;
+            margin-bottom: 1rem;
         }
 
         .hero-title .en-la {
@@ -100,12 +105,19 @@ import { Button } from "./ui/button";
 
         .hero-description {
             font-size: 1.125rem;
+            margin-bottom: 1.5rem;
         }
     }
 
     @media (max-width: 480px) {
+        .hero-section {
+            min-height: 50vh;
+            padding: 1rem 1rem;
+        }
+
         .hero-title {
             font-size: 4rem;
+            margin-bottom: 0.75rem;
         }
 
         .hero-title .en-la {
@@ -114,6 +126,7 @@ import { Button } from "./ui/button";
 
         .hero-description {
             font-size: 1rem;
+            margin-bottom: 1rem;
         }
     }
 

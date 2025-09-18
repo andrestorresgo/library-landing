@@ -1,0 +1,78 @@
+---
+import InformationMarqueeWrapper from "@/components/react/InformationMarquee";
+---
+
+<section class="py-12 md:py-20 px-4 bg-gradient-to-b from-blue-50 to-white">
+    <div class="container mx-auto max-w-6xl">
+        <!-- Title -->
+        <div class="text-center mb-12">
+            <h2
+                class="text-3xl md:text-4xl lg:text-5xl font-extrabold schoolbell uppercase leading-tight text-amber-500"
+            >
+                ¿Quieres saber dónde irá tu libro?
+            </h2>
+        </div>
+
+        <!-- Marquee Component -->
+        <div class="mb-12">
+            <InformationMarqueeWrapper client:load />
+        </div>
+
+        <!-- Descriptive Paragraph -->
+        <div class="max-w-4xl mx-auto">
+            <p
+                class="text-lg md:text-xl text-gray-700 leading-relaxed text-center comfortaa"
+            >
+                Tu libro emprenderá un viaje asombroso a través de algunos de
+                los paisajes más impresionantes de Bolivia, un camino de tierra,
+                sal y volcanes. Cruzará el majestuoso Salar de Uyuni, el
+                desierto de sal más grande del mundo, pasará junto a las aguas
+                vibrantes de la Laguna Colorada y sorteará imponentes volcanes
+                andinos, hasta llegar al remoto pueblo de Quetena Chico.
+            </p>
+            <p
+                class="text-lg md:text-xl text-gray-700 leading-relaxed text-center comfortaa mt-6"
+            >
+                Ahí, en el corazón de la altiplanicie, el libro encontrará su
+                hogar en la biblioteca de la Unidad Educativa Litoral,
+                construida con tanto esfuerzo por toda la comunidad.
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .comfortaa {
+        font-family: "Comfortaa Variable", "Comfortaa", sans-serif;
+        font-variation-settings: "wght" 400;
+    }
+
+    .marquee-image {
+        height: 60px;
+        width: 90px;
+        object-fit: cover;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+    }
+
+    .marquee-image:hover {
+        transform: scale(1.05);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .marquee-image {
+            height: 50px;
+            width: 75px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .marquee-image {
+            height: 40px;
+            width: 60px;
+        }
+    }
+</style>

@@ -4,6 +4,8 @@ import "../styles/global.css";
 import Hero from "../components/Hero.astro";
 import Stories from "../components/Stories.astro";
 import Layout from "../layouts/main.astro";
+import Information from "@/components/Information.astro";
+import Donations from "@/components/Donations.astro";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
@@ -12,4 +14,6 @@ import Layout from "../layouts/main.astro";
 <Layout content={{ title: "Libros en la Frontera" }}>
     <Hero />
     <Stories />
+    <Information />
+    <Donations />
 </Layout>

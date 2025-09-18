@@ -1,0 +1,100 @@
+---
+import {
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
+---
+
+<section class="py-12 md:py-20 px-4 bg-gradient-to-b from-white to-blue-50">
+    <div class="container mx-auto max-w-6xl">
+        <!-- Title -->
+        <div class="text-center mb-12">
+            <h2
+                class="text-3xl md:text-4xl lg:text-5xl font-extrabold schoolbell uppercase leading-tight text-green-600"
+            >
+                Puntos de donación
+            </h2>
+        </div>
+
+        <!-- Donation Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- School Card -->
+            <Card
+                className="aspect-square flex flex-col bg-amber-500 text-white shadow-xl"
+            >
+                <CardHeader className="text-center pb-4">
+                    <div class="flex justify-center mb-4">
+                        <img
+                            src="/img/education-school-svgrepo-com.svg"
+                            alt="School icon"
+                            class="w-16 h-16 brightness-0 invert"
+                        />
+                    </div>
+                    <CardTitle className="text-4xl font-extrabold comfortaa">
+                        COLEGIO
+                    </CardTitle>
+                </CardHeader>
+                <CardContent
+                    className="flex-grow flex items-center justify-center"
+                >
+                    <h3 class="text-5xl font-semibold schoolbell text-center">
+                        San Cristóbal
+                    </h3>
+                </CardContent>
+                <CardFooter className="pt-4 pb-6">
+                    <p class="text-center text-lg comfortaa w-full">
+                        La recolección se hará en el colegio
+                    </p>
+                </CardFooter>
+            </Card>
+
+            <!-- Company Card -->
+            <Card
+                className="aspect-square flex flex-col bg-blue-500 text-white shadow-xl"
+            >
+                <CardHeader className="text-center pb-4">
+                    <div class="flex justify-center mb-4">
+                        <img
+                            src="/img/company-svgrepo-com.svg"
+                            alt="Company icon"
+                            class="w-16 h-16 brightness-0 invert"
+                        />
+                    </div>
+                    <CardTitle className="text-4xl font-bold comfortaa">
+                        EMPRESA
+                    </CardTitle>
+                </CardHeader>
+                <CardContent
+                    className="flex-grow flex items-center justify-center"
+                >
+                    <h3 class="text-5xl font-semibold schoolbell text-center">
+                        IT Group Systems
+                    </h3>
+                </CardContent>
+                <CardFooter className="pt-4 pb-6">
+                    <p class="text-center text-lg comfortaa w-full">
+                        La recolección se hará en la empresa
+                    </p>
+                </CardFooter>
+            </Card>
+        </div>
+    </div>
+</section>
+
+<style>
+    .comfortaa {
+        font-family: "Comfortaa Variable", "Comfortaa", sans-serif;
+        font-variation-settings: "wght" 400;
+    }
+
+    .schoolbell {
+        font-family: "Schoolbell", cursive;
+        font-weight: 400;
+        transform: rotate(-2deg);
+        display: inline-block;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+</style>
