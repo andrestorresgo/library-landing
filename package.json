@@ -11,14 +11,26 @@
   "dependencies": {
     "@astrojs/mdx": "^4.3.5",
     "@astrojs/react": "^4.3.1",
+    "@fontsource-variable/comfortaa": "^5.2.8",
+    "@fontsource/schoolbell": "^5.2.7",
+    "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/vite": "^4.1.13",
     "@types/canvas-confetti": "^1.9.0",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
     "astro": "^5.13.8",
+    "astro-font": "^1.1.0",
     "canvas-confetti": "^1.9.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.6.0",
+    "lucide-react": "^0.544.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.13"
+  },
+  "devDependencies": {
+    "tw-animate-css": "^1.3.8"
   }
 }
