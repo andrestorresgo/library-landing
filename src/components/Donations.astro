@@ -22,16 +22,16 @@ import {
             </h2>
         </div>
 
-        <!-- Donation Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    <!-- Donation Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto auto-rows-fr">
             <!-- School Card -->
-            <Card className="bg-gradient-to-br from-amber-400 to-amber-600 shadow-xl hover:shadow-2xl transition-all duration-300">
+            <Card className="h-full flex flex-col justify-between bg-gradient-to-br from-amber-400 to-amber-600 shadow-xl hover:shadow-2xl transition-all duration-300">
                 <CardHeader>
                     <CardLogo>
                         <img
                             src="/img/logo_sc.png"
                             alt="School icon"
-                            class="w-auto h-8"
+                            class="w-8 h-8 object-contain"
                         />
                     </CardLogo>
                     <div class="flex-1">
@@ -66,13 +66,13 @@ import {
             </Card>
 
             <!-- Company Card -->
-            <Card className="bg-gradient-to-br from-blue-500 to-blue-700 shadow-xl hover:shadow-2xl transition-all duration-300">
+            <Card className="h-full flex flex-col justify-between bg-gradient-to-br from-blue-500 to-blue-700 shadow-xl hover:shadow-2xl transition-all duration-300">
                 <CardHeader>
                     <CardLogo>
                         <img
                             src="/img/logo_itgroup.png"
                             alt="Company icon"
-                            class="w-8 h-auto"
+                            class="w-8 h-8 object-contain"
                         />
                     </CardLogo>
                     <div class="flex-1">
@@ -91,7 +91,7 @@ import {
                                 <circle cx="12" cy="10" r="3"/>
                             </svg>
                         </CardIcon>
-                        <span class="text-sm text-white/90">Barrio Villa Socavón</span>
+                        <span class="text-md text-white/90">Barrio Villa Socavón</span>
                     </CardInfo>
                     
                     <CardInfo>
@@ -101,7 +101,7 @@ import {
                                 <polyline points="12,6 12,12 16,14"/>
                             </svg>
                         </CardIcon>
-                        <span class="text-sm text-white/90"> 8:30 - 12:30  /  14:30 - 18:30</span>
+                        <span class="text-md text-white/90"> 8:30 - 12:30  /  14:30 - 18:30</span>
                     </CardInfo>
                 </CardContent>
             </Card>
