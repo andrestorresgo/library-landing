@@ -97,7 +97,7 @@ export default function StoriesCarousel() {
           <div className="overflow-hidden">
             <div className="flex">
               <div className="min-w-0 shrink-0 grow-0 basis-full">
-                <Card className="flex flex-col h-full shadow-lg">
+                <Card className="flex flex-col shadow-lg">
                   <CardHeader className="pb-2">
                     <div className="flex justify-center mb-2">
                       <img
@@ -106,7 +106,7 @@ export default function StoriesCarousel() {
                         className="w-32 h-32 rounded-full object-cover"
                       />
                     </div>
-                    <CardTitle className="text-center text-lg font-bold comfortaa">
+                    <CardTitle className="text-center text-lg font-bold comfortaa text-gray-800">
                       Hola, Soy Shari!
                     </CardTitle>
                   </CardHeader>
@@ -166,17 +166,29 @@ export default function StoriesCarousel() {
         >
           {stories.map((story) => (
             <CarouselItem key={story.id}>
-              <Card className="flex flex-col h-full shadow-lg">
+              <Card className="flex flex-col shadow-lg">
                 <CardHeader className="pb-2">
                   <div className="flex justify-center mb-2">
                     <img
                       src={story.image}
                       alt={story.alt}
-                      className="w-32 h-32 rounded-full object-cover"
+                      className="w-32 h-32 rounded-full object-cover "
                     />
                   </div>
-                  <CardTitle className="text-center text-lg font-bold comfortaa">
-                    {story.name}
+                  <CardTitle className="text-center text-lg font-bold comfortaa text-gray-800">
+                    {/* Split at the first comma so 'Hola,' is on the first line and the rest on the second */}
+                    {(() => {
+                      const parts = story.name.split(/,(.+)/);
+                      if (parts.length > 1) {
+                        return (
+                          <>
+                            <span className="block">{parts[0] + ','}</span>
+                            <span className="block">{parts[1].trim()}</span>
+                          </>
+                        );
+                      }
+                      return <span className="block">{story.name}</span>;
+                    })()}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="px-4 py-2">
