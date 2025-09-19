@@ -1,0 +1,49 @@
+---
+import { Image } from 'astro:assets'
+
+import ruler from 'src/assets/drawings/Regla.png'
+---
+
+<Image
+  src={ruler}
+  alt='ruler'
+  class='ruler'
+/>
+
+<style>
+.ruler {
+    animation: dibujo 3s infinite;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    position: absolute;
+    top: 15%;
+    right: 20%;
+    z-index: 2;
+}
+
+@keyframes dibujo {
+    0%, 20% { transform: translate(0, 0) rotate(0deg); }
+    21%, 40% { transform: translate(3px, 1px) rotate(10deg); }
+    41%, 60% { transform: translate(-3px, -1px) rotate(-7deg); }
+    61%, 80% { transform: translate(-1px, 3px) rotate(5deg); }
+    81%, 100% { transform: translate(1px, -3px) rotate(-10deg); }
+}
+
+@media only screen and (max-width: 768px) {
+    .ruler {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .ruler {
+        right: 15%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .ruler {
+        right: 10%;
+    }
+}
+</style>
