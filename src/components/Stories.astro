@@ -1,11 +1,13 @@
 ---
 import {
-    Card,
-    CardContent,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card";
+    CardStories,
+    CardStoriesAvatar,
+    CardStoriesAvatarImage,
+    CardStoriesName,
+    CardStoriesText,
+    CardStoriesQuote,
+    quoteColors,
+} from "@/components/ui/cardStories";
 import StoriesCarousel from "@/components/react/StoriesCarousel";
 ---
 
@@ -13,107 +15,38 @@ import StoriesCarousel from "@/components/react/StoriesCarousel";
     <div class="container mx-auto">
         <!-- Desktop View - Grid Layout -->
         <div class="hidden md:grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card
-                className="flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-                <CardHeader className="pb-2">
-                    <div class="flex justify-center mb-2">
-                        <img
-                            src="/img/kid1.svg"
-                            alt="Shari"
-                            class="w-40 h-40 rounded-full object-cover"
-                        />
-                    </div>
-                    <CardTitle
-                        className="text-center text-xl font-bold comfortaa"
-                    >
-                        Hola, Soy Shari!
-                    </CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow px-6 py-2">
-                    <p class="text-gray-600 text-center italic leading-relaxed">
-                        "Junto a mi comunidad construimos una biblioteca, un
-                        espacio para aprender y soñar. Me gustaría tener libros
-                        de leyendas de nuestra tierra y narraciones de
-                        historias."
-                    </p>
-                </CardContent>
-                <CardFooter className="pt-2 pb-6">
-                    <div class="w-full text-center">
-                        <span class="schoolbell text-2xl text-blue-500">
-                            "Leer abre puertas"
-                        </span>
-                    </div>
-                </CardFooter>
-            </Card>
+            <CardStories className="h-full">
+                <CardStoriesAvatar className="flex justify-center mb-4">
+                    <CardStoriesAvatarImage src="/img/kid3.svg" alt="Shari" />
+                </CardStoriesAvatar>
+                <CardStoriesName className="comfortaa">Hola, Soy Shari!</CardStoriesName>
+                <CardStoriesText>
+                    "Nuestra biblioteca es pequeña, pero está llena de esperanza. Con mi comunidad la construimos para que sea un refugio de lectura. Necesitamos más libros educativos, que nos preparen para la vida."
+                </CardStoriesText>
+                <CardStoriesQuote color={quoteColors.cyan} className="schoolbell">"Leer abre puertas"</CardStoriesQuote>
+            </CardStories>
 
-            <Card
-                className="flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-                <CardHeader className="pb-2">
-                    <div class="flex justify-center mb-2">
-                        <img
-                            src="/img/kid2.svg"
-                            alt="Nayde"
-                            class="w-40 h-40 rounded-full object-cover"
-                        />
-                    </div>
-                    <CardTitle
-                        className="text-center text-xl font-bold comfortaa"
-                    >
-                        Hola, Soy Nayde!
-                    </CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow px-6 py-2">
-                    <p class="text-gray-600 text-center italic leading-relaxed">
-                        "Junto a mi comunidad construimos una biblioteca, un
-                        espacio para aprender y soñar. Me gustaría tener libros
-                        de leyendas de nuestra tierra y narraciones de
-                        historias."
-                    </p>
-                </CardContent>
-                <CardFooter className="pt-2 pb-6">
-                    <div class="w-full text-center">
-                        <span class="schoolbell text-2xl text-amber-500">
-                            "Me encanta leer"
-                        </span>
-                    </div>
-                </CardFooter>
-            </Card>
+            <CardStories className="h-full">
+                <CardStoriesAvatar className="flex justify-center mb-4">
+                    <CardStoriesAvatarImage src="/img/kid2.svg" alt="Nayde" />
+                </CardStoriesAvatar>
+                <CardStoriesName className="comfortaa">Hola, Soy Nayde!</CardStoriesName>
+                <CardStoriesText>
+                    "Junto a mi comunidad construimos una biblioteca, un espacio para aprender y soñar. Me gustaría tener libros de leyendas de nuestra tierra y narraciones de historias."
+                </CardStoriesText>
+                <CardStoriesQuote color={quoteColors.orange} className="schoolbell">"Me encanta leer"</CardStoriesQuote>
+            </CardStories>
 
-            <Card
-                className="flex flex-col h-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-                <CardHeader className="pb-2">
-                    <div class="flex justify-center mb-2">
-                        <img
-                            src="/img/kid3.svg"
-                            alt="Alison"
-                            class="w-40 h-40 rounded-full object-cover"
-                        />
-                    </div>
-                    <CardTitle
-                        className="text-center text-xl font-bold comfortaa"
-                    >
-                        Hola, Soy Alison!
-                    </CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow px-6 py-2">
-                    <p class="text-gray-600 text-center italic leading-relaxed">
-                        "Junto a mi comunidad construimos una biblioteca, un
-                        espacio para aprender y soñar. Me gustaría tener libros
-                        de leyendas de nuestra tierra y narraciones de
-                        historias."
-                    </p>
-                </CardContent>
-                <CardFooter className="pt-2 pb-6">
-                    <div class="w-full text-center">
-                        <span class="schoolbell text-2xl text-green-500">
-                            "Una aventura espera en cada libro"
-                        </span>
-                    </div>
-                </CardFooter>
-            </Card>
+            <CardStories className="h-full">
+                <CardStoriesAvatar className="flex justify-center mb-4">
+                    <CardStoriesAvatarImage src="/img/kid1.svg" alt="Alison" />
+                </CardStoriesAvatar>
+                <CardStoriesName className="comfortaa">Hola, Soy Alison!</CardStoriesName>
+                <CardStoriesText>
+                    "Con mis compañeros, profesores y padres de familia construimos una biblioteca, un espacio para nosotros. Queremos que la lectura nos ayude a prepararnos para el futuro."
+                </CardStoriesText>
+                <CardStoriesQuote color={quoteColors.green} className="schoolbell">"Leer me relaja"</CardStoriesQuote>
+            </CardStories>
         </div>
 
         <!-- Mobile View - Carousel -->

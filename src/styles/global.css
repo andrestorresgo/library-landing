@@ -1,6 +1,16 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Local Marvin font */
+@font-face {
+    font-family: 'Marvin';
+    src: local('Marvin'), url('/fonts/Marvin.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -145,4 +155,7 @@
 
 .font-schoolbell {
     font-family: "Schoolbell", cursive;
+}
+.font-marvin {
+    font-family: "Marvin", sans-serif;
 }

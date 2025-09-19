@@ -17,10 +17,10 @@ const stories = [
   {
     id: 1,
     name: "Hola, Soy Shari!",
-    image: "/img/kid1.svg",
+    image: "/img/kid3.svg",
     alt: "Happy child reading",
     testimonial:
-      "Junto a mi comunidad construimos una biblioteca, un espacio para aprender y soñar. Me gustaría tener libros de leyendas de nuestra tierra y narraciones de historias.",
+      "Nuestra biblioteca es pequeña, pero está llena de esperanza. Con mi comunidad la construimos para que sea un refugio de lectura. Necesitamos más libros educativos, que nos preparen para la vida.",
     quote: "Leer abre puertas",
     color: "text-blue-500",
   },
@@ -37,11 +37,11 @@ const stories = [
   {
     id: 3,
     name: "Hola, Soy Alison!",
-    image: "/img/kid3.svg",
+    image: "/img/kid1.svg",
     alt: "Creative child with books",
     testimonial:
-      "Junto a mi comunidad construimos una biblioteca, un espacio para aprender y soñar. Me gustaría tener libros de leyendas de nuestra tierra y narraciones de historias.",
-    quote: "Una aventura espera en cada libro",
+      "Con mis compañeros, profesores y padres de familia construimos una biblioteca, un espacio para nosotros. Queremos que la lectura nos ayude a prepararnos para el futuro.",
+    quote: "Leer me relaja",
     color: "text-green-500",
   },
 ];
