@@ -1,39 +1,83 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets";
 
-import clock from 'src/assets/drawings/Reloj.png'
+import clock from "src/assets/drawings/Reloj.png";
 ---
 
-<Image
-  src={clock}
-  alt='clock'
-  class='clock mt-2 mr-2 sm:ml-8 lg:ml-20'
-/>
+<Image src={clock} alt="clock" class="clock mt-2 mr-2 sm:ml-8 lg:ml-20" />
 
 <style>
-.clock {
-    animation: dibujo2 4s infinite;
-    filter: grayscale(100%);
-    opacity: 0.7;
-    position: absolute;
-    top: 65%;
-    right: 20%;
-    z-index: 2;
-}
-
-@keyframes dibujo2 {
-    0%, 15% { transform: translate(0, 0) rotate(0deg); }
-    16%, 30% { transform: translate(2px, 1px) rotate(8deg); }
-    31%, 45% { transform: translate(-2px, -1px) rotate(-6deg); }
-    46%, 60% { transform: translate(-1px, 2px) rotate(4deg); }
-    61%, 75% { transform: translate(1px, -2px) rotate(-8deg); }
-    76%, 90% { transform: translate(3px, -1px) rotate(6deg); }
-    91%, 100% { transform: translate(-3px, 1px) rotate(-6deg); }
-}
-
-@media only screen and (max-width: 600px) {
-    img {
-        display: none;
+    .clock {
+        animation: dibujo2 4s infinite;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        position: absolute;
+        top: 65%;
+        right: 20%;
+        z-index: 2;
+        width: 60px;
+        height: auto;
     }
-}
+
+    @keyframes dibujo2 {
+        0%,
+        15% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        16%,
+        30% {
+            transform: translate(2px, 1px) rotate(8deg);
+        }
+        31%,
+        45% {
+            transform: translate(-2px, -1px) rotate(-6deg);
+        }
+        46%,
+        60% {
+            transform: translate(-1px, 2px) rotate(4deg);
+        }
+        61%,
+        75% {
+            transform: translate(1px, -2px) rotate(-8deg);
+        }
+        76%,
+        90% {
+            transform: translate(3px, -1px) rotate(6deg);
+        }
+        91%,
+        100% {
+            transform: translate(-3px, 1px) rotate(-6deg);
+        }
+    }
+
+    /* Hide on tablets and mobile */
+    @media only screen and (max-width: 1024px) {
+        .clock {
+            display: none;
+        }
+    }
+
+    /* Small desktop */
+    @media (min-width: 1024px) {
+        .clock {
+            right: 10%;
+            width: 70px;
+        }
+    }
+
+    /* Large desktop */
+    @media (min-width: 1280px) {
+        .clock {
+            right: 15%;
+            width: 80px;
+        }
+    }
+
+    /* Extra large desktop */
+    @media (min-width: 1536px) {
+        .clock {
+            right: 20%;
+            width: 90px;
+        }
+    }
 </style>

@@ -68,6 +68,8 @@ import { Button } from "./ui/button";
         transform: rotate(-2deg);
         display: inline-block;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 10;
     }
 
     .hero-title .comfortaa {
@@ -113,6 +115,11 @@ import { Button } from "./ui/button";
             font-size: 1.125rem;
             margin-bottom: 1.5rem;
         }
+
+        .underline-libros, .underline-frontera {
+            background-size: 100% 1rem;
+            padding-bottom: 0.5rem;
+        }
     }
 
     @media (max-width: 480px) {
@@ -139,14 +146,16 @@ import { Button } from "./ui/button";
     .underline-libros {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 15'%3E%3Cpath d='M0,10 C20,5 40,15 60,10 S80,5 100,10' stroke='%23fb923c' stroke-width='3' fill='none' /%3E%3C/svg%3E");
         background-repeat: no-repeat;
-        background-position: bottom left;
-        background-size: 100% 100%;
+        background-position: bottom;
+        background-size: 100% 3rem;
+        padding-bottom: 0.5rem;
     }
 
     .underline-frontera {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 15'%3E%3Cpath d='M0,10 C20,15 40,5 60,15 S80,5 100,10' stroke='%233b82f6' stroke-width='3' fill='none' /%3E%3C/svg%3E");
         background-repeat: no-repeat;
-        background-position: bottom left;
-        background-size: 100% 100%;
+        background-position: bottom;
+        background-size: 100% 3rem;
+        padding-bottom: 0.5rem;
     }
 </style>
