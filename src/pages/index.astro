@@ -6,6 +6,8 @@ import Stories from "../components/Stories.astro";
 import Layout from "../layouts/main.astro";
 import Information from "@/components/Information.astro";
 import Donations from "@/components/Donations.astro";
+// React/TSX card component
+import CardInfoSchool from "@/components/ui/cardInfoSchool";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
@@ -15,5 +17,10 @@ import Donations from "@/components/Donations.astro";
     <Hero />
     <Stories />
     <Information />
+        <!-- Cards de info (mapa / social) -->
+        <CardInfoSchool 
+              mapLink="https://www.google.com/maps?q=-22.19015632135715, -67.33857688704003"
+              facebookUrl="https://www.facebook.com/profile.php?id=100088528537084"
+            />
     <Donations />
 </Layout>
