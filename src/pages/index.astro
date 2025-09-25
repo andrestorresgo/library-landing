@@ -13,7 +13,13 @@ import CardInfoSchool from "@/components/ui/cardInfoSchool";
 // https://docs.astro.build/basics/astro-components/
 ---
 
-<Layout content={{ title: "Libros en la Frontera" }}>
+<Layout
+    content={{
+        title: "Libros en la Frontera",
+        description:
+            "Ayuda a llenar de historias y conocimiento la biblioteca de una escuela en la frontera de Bolivia. Dona libros para crear oportunidades educativas y transformar vidas a través de la lectura.",
+    }}
+>
     <Hero />
     <Stories />
     <Information />

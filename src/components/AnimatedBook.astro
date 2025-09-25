@@ -1,51 +1,83 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets";
 
-import libro from 'src/assets/drawings/Libro.png'
+import libro from "src/assets/drawings/Libro.png";
 ---
 
-<Image
-  src={libro}
-  alt='libro'
-  class='libro'
-/>
+<Image src={libro} alt="libro" class="libro" />
 
 <style>
-.libro {
-    animation: dibujo4 4s infinite;
-    filter: grayscale(100%);
-    opacity: 0.7;
-    position: absolute;
-    top: 15%;
-    left: 15%;
-    z-index: 2;
-}
-
-@keyframes dibujo4 {
-    0%, 15% { transform: translate(0, 0) rotate(0deg); }
-    16%, 30% { transform: translate(-2px, 1px) rotate(-4deg); }
-    31%, 45% { transform: translate(1px, -3px) rotate(3deg); }
-    46%, 60% { transform: translate(3px, 2px) rotate(-2deg); }
-    61%, 75% { transform: translate(-1px, -2px) rotate(1deg); }
-    76%, 90% { transform: translate(-3px, 1px) rotate(0deg); }
-    91%, 100% { transform: translate(2px, -1px) rotate(-1deg); }
-}
-
-@media only screen and (max-width: 768px) {
     .libro {
-        display: none;
+        animation: dibujo4 4s infinite;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        z-index: 2;
+        width: 60px;
+        height: auto;
     }
-}
 
-@media (min-width: 768px) {
-    .libro {
-        left: 12%;
+    @keyframes dibujo4 {
+        0%,
+        15% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        16%,
+        30% {
+            transform: translate(-2px, 1px) rotate(-4deg);
+        }
+        31%,
+        45% {
+            transform: translate(1px, -3px) rotate(3deg);
+        }
+        46%,
+        60% {
+            transform: translate(3px, 2px) rotate(-2deg);
+        }
+        61%,
+        75% {
+            transform: translate(-1px, -2px) rotate(1deg);
+        }
+        76%,
+        90% {
+            transform: translate(-3px, 1px) rotate(0deg);
+        }
+        91%,
+        100% {
+            transform: translate(2px, -1px) rotate(-1deg);
+        }
     }
-}
 
-@media (min-width: 1024px) {
-    .libro {
-        left: 8%;
+    /* Hide on tablets and mobile */
+    @media only screen and (max-width: 1024px) {
+        .libro {
+            display: none;
+        }
     }
-}
+
+    /* Small desktop */
+    @media (min-width: 1024px) {
+        .libro {
+            left: 8%;
+            width: 70px;
+        }
+    }
+
+    /* Large desktop */
+    @media (min-width: 1280px) {
+        .libro {
+            left: 12%;
+            width: 80px;
+        }
+    }
+
+    /* Extra large desktop */
+    @media (min-width: 1536px) {
+        .libro {
+            left: 15%;
+            width: 90px;
+        }
+    }
 </style>
