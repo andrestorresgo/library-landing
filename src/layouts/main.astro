@@ -14,6 +14,10 @@ import "@fontsource-variable/comfortaa";
             content={content.description ||
                 "Ayuda a llenar de historias y conocimiento la biblioteca de una escuela en la frontera de Bolivia. Dona libros para crear oportunidades educativas."}
         />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="frame-src 'self' https://www.google.com https://maps.google.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com https://www.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://maps.googleapis.com https://maps.gstatic.com https://www.google.com;"
+        />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <title>{content.title}</title>
     </head>

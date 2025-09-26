@@ -11,7 +11,7 @@ import {
 import StoriesCarousel from "@/components/react/StoriesCarousel";
 ---
 
-<section class="py-20 md:py-20 px-4 bg-gradient-to-b from-white to-blue-50">
+<section class="py-8 md:py-20 px-4 bg-gradient-to-b from-white to-blue-50">
     <div class="container mx-auto">
         <!-- Desktop View - Grid Layout -->
         <div class="hidden md:grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -24,9 +24,15 @@ import StoriesCarousel from "@/components/react/StoriesCarousel";
                     <span class="block">Soy Shari!</span>
                 </CardStoriesName>
                 <CardStoriesText>
-                    "Nuestra biblioteca es pequeña, pero está llena de esperanza. Con mi comunidad la construimos para que sea un refugio de lectura. Necesitamos más libros educativos, que nos preparen para la vida."
+                    "Nuestra biblioteca es pequeña, pero está llena de
+                    esperanza. Con mi comunidad la construimos para que sea un
+                    refugio de lectura. Necesitamos más libros educativos, que
+                    nos preparen para la vida."
                 </CardStoriesText>
-                <CardStoriesQuote color={quoteColors.cyan} className="schoolbell">"Leer abre puertas"</CardStoriesQuote>
+                <CardStoriesQuote
+                    color={quoteColors.cyan}
+                    className="schoolbell">"Leer abre puertas"</CardStoriesQuote
+                >
             </CardStories>
 
             <CardStories className="h-full">
@@ -38,9 +44,14 @@ import StoriesCarousel from "@/components/react/StoriesCarousel";
                     <span class="block">Soy Nayde!</span>
                 </CardStoriesName>
                 <CardStoriesText>
-                    "Junto a mi comunidad construimos una biblioteca, un espacio para aprender y soñar. Me gustaría tener libros de leyendas de nuestra tierra y narraciones de historias."
+                    "Junto a mi comunidad construimos una biblioteca, un espacio
+                    para aprender y soñar. Me gustaría tener libros de leyendas
+                    de nuestra tierra y narraciones de historias."
                 </CardStoriesText>
-                <CardStoriesQuote color={quoteColors.orange} className="schoolbell">"Me encanta leer"</CardStoriesQuote>
+                <CardStoriesQuote
+                    color={quoteColors.orange}
+                    className="schoolbell">"Me encanta leer"</CardStoriesQuote
+                >
             </CardStories>
 
             <CardStories className="h-full">
@@ -52,14 +63,20 @@ import StoriesCarousel from "@/components/react/StoriesCarousel";
                     <span class="block">Soy Alison!</span>
                 </CardStoriesName>
                 <CardStoriesText>
-                    "Con mis compañeros, profesores y padres de familia construimos una biblioteca, un espacio para nosotros. Queremos que la lectura nos ayude a prepararnos para el futuro."
+                    "Con mis compañeros, profesores y padres de familia
+                    construimos una biblioteca, un espacio para nosotros.
+                    Queremos que la lectura nos ayude a prepararnos para el
+                    futuro."
                 </CardStoriesText>
-                <CardStoriesQuote color={quoteColors.green} className="schoolbell">"Leer me relaja"</CardStoriesQuote>
+                <CardStoriesQuote
+                    color={quoteColors.green}
+                    className="schoolbell">"Leer me relaja"</CardStoriesQuote
+                >
             </CardStories>
         </div>
 
         <!-- Mobile View - Carousel -->
-        <div class="md:hidden">
+        <div class="md:hidden py-4">
             <StoriesCarousel client:load />
         </div>
     </div>

@@ -92,12 +92,12 @@ export default function StoriesCarousel() {
 
   if (!isClient) {
     return (
-      <div className="max-w-sm mx-auto">
+      <div className="max-w-md mx-auto px-6">
         <div className="w-full">
-          <div className="overflow-hidden">
+          <div className="overflow-visible">
             <div className="flex">
               <div className="min-w-0 shrink-0 grow-0 basis-full">
-                <Card className="flex flex-col shadow-lg">
+                <Card className="flex flex-col shadow-lg h-[480px]">
                   <CardHeader className="pb-2">
                     <div className="flex justify-center mb-2">
                       <img
@@ -110,14 +110,14 @@ export default function StoriesCarousel() {
                       Hola, Soy Shari!
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="px-4 py-2">
+                  <CardContent className="px-4 py-2 flex-grow flex items-center">
                     <p className="text-gray-600 text-center italic leading-relaxed text-sm">
                       "Junto a mi comunidad construimos una biblioteca, un
                       espacio para aprender y soñar. Me gustaría tener libros de
                       leyendas de nuestra tierra y narraciones de historias."
                     </p>
                   </CardContent>
-                  <CardFooter className="pt-2 pb-4">
+                  <CardFooter className="pt-2 pb-4 mt-auto">
                     <div className="w-full text-center">
                       <span className="schoolbell text-xl text-blue-500">
                         "Leer abre puertas"
@@ -134,7 +134,7 @@ export default function StoriesCarousel() {
   }
 
   return (
-    <div className="max-w-sm mx-auto">
+    <div className="max-w-md mx-auto px-6 overflow-visible">
       <style>
         {`
                 .comfortaa {
@@ -163,10 +163,11 @@ export default function StoriesCarousel() {
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
+          className="overflow-visible px-2"
         >
           {stories.map((story) => (
-            <CarouselItem key={story.id}>
-              <Card className="flex flex-col shadow-lg">
+            <CarouselItem key={story.id} className="pl-2 pr-2">
+              <Card className="flex flex-col shadow-lg h-[480px]">
                 <CardHeader className="pb-2">
                   <div className="flex justify-center mb-2">
                     <img
@@ -182,7 +183,7 @@ export default function StoriesCarousel() {
                       if (parts.length > 1) {
                         return (
                           <>
-                            <span className="block">{parts[0] + ','}</span>
+                            <span className="block">{parts[0] + ","}</span>
                             <span className="block">{parts[1].trim()}</span>
                           </>
                         );
@@ -191,12 +192,12 @@ export default function StoriesCarousel() {
                     })()}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="px-4 py-2">
+                <CardContent className="px-4 py-2 flex-grow flex items-center">
                   <p className="text-gray-600 text-center italic leading-relaxed text-sm">
                     "{story.testimonial}"
                   </p>
                 </CardContent>
-                <CardFooter className="pt-2 pb-4">
+                <CardFooter className="pt-2 pb-4 mt-auto">
                   <div className="w-full text-center">
                     <span className={`schoolbell text-xl ${story.color}`}>
                       "{story.quote}"
